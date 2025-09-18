@@ -4,18 +4,75 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class UserController
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        
         $products = [
-            ['id' => 1, 'product_name' => 'Laptop', 'price' => 45000, 'category' => 'Electronics'],
-            ['id' => 2, 'product_name' => 'Smartphone', 'price' => 25000, 'category' => 'Electronics'],
-            ['id' => 3, 'product_name' => 'Headphones', 'price' => 3500, 'category' => 'Accessories'],
-            ['id' => 4, 'product_name' => 'Office Chair', 'price' => 7000, 'category' => 'Furniture'],
+            [
+                'id' => 1,
+                'product_name' => 'Desserts',
+                'price' => '100.00',
+                'category_id' => '01'
+            ],
+            [
+                'id' => 2,
+                'product_name' => 'Main Dish',
+                'price' => '500.00',
+                'category_id' => '02'
+            ],
         ];
-
         return view('products.index', compact('products'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

@@ -4,37 +4,73 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-
         $categories = [
             [
                 'id' => 1,
-                'category_name' => 'Electronics',
-                'products' => [
-                    ['id' => 1, 'product_name' => 'Laptop', 'price' => 45000],
-                    ['id' => 2, 'product_name' => 'Smartphone', 'price' => 25000],
-                ],
+                'category_name' => 'Desserts',
+                'description' => 'Leche Flan',
             ],
             [
                 'id' => 2,
-                'category_name' => 'Accessories',
-                'products' => [
-                    ['id' => 3, 'product_name' => 'Headphones', 'price' => 3500],
-                    ['id' => 4, 'product_name' => 'Mouse', 'price' => 1200],
-                ],
-            ],
-            [
-                'id' => 3,
-                'category_name' => 'Furniture',
-                'products' => [
-                    ['id' => 5, 'product_name' => 'Office Chair', 'price' => 7000],
-                ],
+                'category_name' => 'Main Dish',
+                'description' => 'Kare-Kare'
             ],
         ];
-
         return view('categories.index', compact('categories'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
